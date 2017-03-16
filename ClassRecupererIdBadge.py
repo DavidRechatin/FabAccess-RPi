@@ -1,11 +1,13 @@
 #!bin/bash/python3.5
 # coding: utf-8
+# Fait par Jimmy FRAGNE
 
 import os
 import pwd
 import rfidreader
 
 class Badge:
+    
     # Notre méthode constructeur
     def __init__(self):
         self.ID_badge = pwd.getpwuid( os.getuid() ) #conversion du signal en id de badge
