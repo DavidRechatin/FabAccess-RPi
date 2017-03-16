@@ -23,16 +23,16 @@ class AllumerLed:
         self.droit = reponseDroitAPI #la réponse de l'API sur les droits.
 
     # Allumage de la led en fonction du droit de l'utilisateur
-    def allumerLedRGB(self, droit):
-        if droit == 0: #Si aucun droit
+    def allumerLedRGB(self):
+        if self.droit == 0: #Si aucun droit
             GPIO.output(rouge, allumer) #on allume la led rouge.
             time.sleep (2000) #attente de deux seconde.
             GPIO.output(rouge, eteindre) #on eteint la led rouge.
-        elif droit == 1: #Si droit avec concierge
+        elif self.droit == 1: #Si droit avec concierge
             GPIO.output(orange, allumer) #on allume la led orange.
             time.sleep(2000) #attente de deux seconde.
             GPIO.output(orange, eteindre) #on eteint la led orange.
-        elif droit == 2: #Si droit total
+        elif self.droit == 2: #Si droit total
             GPIO.output(vert, allumer) #on allume la led verte.
             time.sleep(2000) #attente de deux seconde.
             GPIO.output(vert, eteindre) #on eteint la led verte.

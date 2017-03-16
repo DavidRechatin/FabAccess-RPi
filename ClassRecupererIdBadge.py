@@ -3,7 +3,7 @@
 
 import os
 import pwd
-
+import rfidreader
 
 class Badge:
     # Notre méthode constructeur
@@ -11,5 +11,5 @@ class Badge:
         self.ID_badge = pwd.getpwuid( os.getuid() ) #conversion du signal en id de badge
 
     # Notre méthode renvoyant le numero de badge
-    def return_badge(self):
+    def renvoieIdBadge(self):
         return self.ID_badge #renvoie le numero de badge
