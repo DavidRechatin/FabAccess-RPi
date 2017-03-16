@@ -15,8 +15,8 @@ class afficherNbUsers:
         else:
             self.usersDictionnary[ID_badge] = self.usersLogTime
 
-    def afficherNbUsers(self,ID_badge):
-        return("Nombre de personne présente :", len(liste_entrer))#retourne le nombre de personne présente
+    def afficherNbUsers(self):
+        return("Nombre de personne présente :" + len(liste_entrer))#retourne le nombre de personne présente
 
 
     def enleverGhostUsers(self):
