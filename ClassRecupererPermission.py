@@ -23,14 +23,14 @@ class Permission:
 
     # Notre méthode constructeur
     def __init__(self,ID_badge,id):
-        self.permission = requests.post(urlserveur + "fabaccess/getAuth/"+id+"/"+ID_badge) #on interroge l'API avec le tagRFID recuperer precedemment.
+        self.permission = requests.post(urlserveur + "/getAuth/"+id+"/"+ID_badge) #on interroge l'API avec le tagRFID recuperer precedemment.
         self.permission = json.JSONDecoder().decode(self.permission)   #on decode le json envoyer par l'API
 
 
     # Notre méthode renvoie l'autorisation
     def retourAutorisation(self):
-        if type(self.permission['acces']) == int and self.permission['acces'] < 3:  #si l'autorisation est d'un format correct
-            return self.permission['acces'] #on renvoie l'autorisation
+        if type(self.permission['acces']) == int and self.permission['access'] < 3:  #si l'autorisation est d'un format correct
+            return self.permission['access'] #on renvoie l'autorisation
 
     # Notre méthode pour recuperer l'id d'un utilisateur
     def retourUserId(self):
