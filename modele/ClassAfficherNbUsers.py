@@ -3,7 +3,7 @@
 
 from datetime import datetime
 
-class afficherNbUsers:
+class NbUsers:
 
     # Notre méthode constructeur
     def _init_(self):
