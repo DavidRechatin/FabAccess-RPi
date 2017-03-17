@@ -22,7 +22,7 @@ import json
 class Permission:
 
     # Notre méthode constructeur
-    def __init__(self,ID_badge,id):
+    def __init__(self,ID_badge,id,urlserveur):
         self.permission = requests.post(urlserveur + "/getAuth/"+id+"/"+ID_badge) #on interroge l'API avec le tagRFID recuperer precedemment.
         self.permission = json.JSONDecoder().decode(self.permission)   #on decode le json envoyer par l'API
 

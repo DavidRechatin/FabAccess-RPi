@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # Fait par christophe JUNIER
-import sys
-sys.path.append("undefined\\"undefined"\\FabAccess-RPi\\modele")  #path à definir sur le raspberry
+
 from ClassAfficherNbUsers import *
 from ClassRecupererIdBadge import *
 from ClassJouerSon import *
