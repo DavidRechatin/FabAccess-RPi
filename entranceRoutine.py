@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 # Fait par christophe JUNIER
+import sys
+sys.path.append("undefined\\"undefined"\\FabAccess-RPi\\modele")  #path à definir sur le raspberry
+from ClassAfficherNbUsers import *
+from ClassRecupererIdBadge import *
+from ClassJouerSon import *
 
 personnePresente = NbUsers()          #initialisation du ombre d'utilisateurs
 presenceBadge = Badge()               #initialisation de l'attente d'un badge
